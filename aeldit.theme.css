@@ -6,13 +6,14 @@
  */
 
 :root {
-  --homeImage: url("https://https://github.com/Aeldit/DiscordTheme/blob/main/github_logo.jpg?raw=true");
   --app_bg: url("https://github.com/Aeldit/DiscordTheme/blob/main/img_2.jpg?raw=true");
   --popout_header_shadow: 0px 5px 10px 0px #720b0baa;
-  --main_content_color: #141414aa;
+  --main_content_color: #141414bb;
+  --tooltip_color: #141414;
   --accent_color: #d40b0baa;
+  --accent_color_light: #ff0000;
   --border_radius: 15px;
-  --border_radius_list: 10px;
+  --border_radius_button: 10px;
 }
 
 body {
@@ -60,7 +61,7 @@ body {
 
 .app-2CXKsg,
 .bg-1QIAus {
-  background-color: transparent;
+  background-color: var(--main_content_color);
 }
 
 /* Bg image */
@@ -78,13 +79,20 @@ body {
   background-size: cover;
 }
 
+/* Main layer */
+.layers-OrUESM {
+  z-index: 1;
+  backdrop-filter: blur(var(--app_blur));
+}
+
+
 /***************************************** 
  * Title bar
  ****************************************/
 .titleBar-1it3bQ {
   height: 25px;
-  margin-top: 0px;
-  background-color: var(--main_content_color);
+  margin-top: -3px;
+  background-color: transparent;
 }
 
 /* Top left word ("Discord") */
@@ -109,6 +117,11 @@ body {
 /***************************************** 
  * Chat
  ****************************************/
+.chat-2ZfjoI,
+.noChannel-1GDIAZ {
+  background-color: transparent !important;
+}
+
 .chatContent-3KubbW {
   background-color: transparent;
 }
@@ -127,7 +140,7 @@ body {
  * Members list
  ****************************************/
 .container-2o3qEW {
-  background-color: var(--main_content_color);
+  background-color: transparent;
 }
 
 .members-3WRCEx,
@@ -140,7 +153,7 @@ body {
 }
 
 .layout-1qmrhw {
-  border-radius: var(--border_radius_list);
+  border-radius: var(--border_radius_button);
 }
 
 /* Bot tag */
@@ -152,21 +165,258 @@ body {
   background-color: var(--accent_color);
 }
 
+
+/***************************************** 
+ * Friends list
+ ****************************************/
+.container-2cd8Mz {
+  background-color: transparent !important;
+}
+
+.searchBar-2aylmZ {
+  background-color: var(--accent_color);
+  border-radius: var(--border_radius_button);
+}
+
+.peopleListItem-u6dGxF:hover {
+  background-color: var(--main_content_color);
+}
+
+.peopleListItem-u6dGxF.active-2UF8Zh {
+  background-color: var(--main_content_color);
+}
+
+.peopleListItem-u6dGxF .actionButton-3-B2x- {
+  background-color: var(--accent_color);
+}
+
+/***************************************** 
+ * Text typing bar (on the bottom)
+ ****************************************/
+.channelTextArea-1VQBuV,
+.wrapper-2SplAX {
+  margin: 12px 0 12px 0;
+  background-color: #700000aa;
+  border-radius: var(--border_radius_button);
+}
+
+.channelTextArea-1VQBuV .scrollableContainer-15eg7h,
+.wrapper-2SplAX .scrollableContainer-15eg7h {
+  background-color: transparent;
+}
+
+.channelTextArea-1VQBuV .placeholder-1rCBhr,
+.wrapper-2SplAX .placeholder-1rCBhr {
+  color: white;
+}
+
+
+/***************************************** 
+ * Buttons
+ ****************************************/
+.button-ejjZWC {
+  border-radius: var(--border_radius_button) !important;
+}
+
+.lookFilled-1H2Jvj,
+.lookOutlined-3RTC7c,
+.lookLink-13iF2K,
+.lookInverted-2GrLaB {
+  background-color: var(--accent_color) !important;
+  border: var(--button-outline) !important;
+  color: white !important;
+  overflow: hidden;
+}
+
+
+/***************************************** 
+ * Scrollbars
+ ****************************************/
+::-webkit-scrollbar {
+  width: 10px !important;
+  height: 10px !important;
+  background: transparent !important;
+  border-color: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent_color) !important;
+  border-radius: var(--border_radius_button) !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent_color) !important;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece {
+  background: transparent !important;
+  border-color: transparent !important;
+}
+
+/* Servers list scrollbar */
+.thin-RnSY0a::-webkit-scrollbar {
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.none-1rXy4P::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+}
+
+
+/***************************************** 
+ * Sliders
+ ****************************************/
+.bar-2H7Q9u {
+  background-color: transparent !important;
+}
+
+.bar-2H7Q9u .barFill-3RgCsY {
+  background-color: var(--accent_color);
+}
+
+.grabber-3R-Rx9 {
+  background-color: var(--accent_color);
+  border-color: black;
+  box-shadow: none;
+}
+
+
+/***************************************** 
+ * Switches
+ ****************************************/
+.container-1QtPKm {
+  background-color: var(--accent_color) !important;
+}
+
+.container-1QtPKm .slider-HJFN2i rect {
+  fill: black !important;
+}
+
+.container-1QtPKm .slider-HJFN2i path {
+  fill: var(--accent_color) !important;
+}
+
+.container-1QtPKm.checked-16gMAN {
+  fill: var(--accent_color);
+  fill: var(--accent_color);
+}
+
+/* BetterDiscord switches */
+.bd-switch .bd-switch-body {
+  background-color: var(--accent_color);
+}
+
+.bd-switch .bd-switch-body .bd-switch-handle {
+  fill: black;
+}
+
+.bd-switch input:active+.bd-switch-body {
+  fill: var(--accent_color);
+}
+
+.bd-switch input:checked+.bd-switch-body {
+  fill: var(--accent_color);
+  fill: var(--accent_color);
+}
+
+.bd-switch input:checked:active+.bd-switch-body {
+  fill: var(--accent_color);
+}
+
+
+/***************************************** 
+ * Tooltips
+ ****************************************/
+.tooltip-33Jwqe {
+  background-color: var(--tooltip_color) !important;
+  border-radius: var(--border_radius_button);
+}
+
+.tooltip-33Jwqe .tooltipPointer-sMBQqe {
+  border-top-color: var(--tooltip-color) !important;
+}
+
+.tooltip-33Jwqe .tooltipContent-38tm3I,
+.tooltip-33Jwqe .guildNameText-jBFbNC,
+.tooltip-33Jwqe .clickCTA-1bk0UN {
+  color: var(--accent_color_light);
+}
+
+.tooltip-33Jwqe .anchor-1MIwyf {
+  color: var(--tooltip_color);
+  text-decoration: underline;
+}
+
+.tooltip-33Jwqe .activityIcon-vfIBet {
+  color: var(--tooltip_color) !important;
+}
+
+
+/***************************************** 
+ * Add friend
+ ****************************************/
+.addFriendInputWrapper-kkoSV9 {
+  padding: 0 4px;
+  background-color: transparent;
+  border: 1px var(--accent_color) solid;
+}
+
+.addFriendInputWrapper-kkoSV9 .addFriendInput-1Ta-rO {
+  padding: 0;
+}
+
+.addFriendInputWrapper-kkoSV9 .addFriendInput-1Ta-rO .input-3O04eu {
+  padding: 0 6px;
+}
+
+
+/***************************************** 
+ * Message actions tooltip
+ ****************************************/
+.wrapper-2vIMkT {
+  background-color: var(--main_content_color) !important;
+  border-radius: var(--border_radius_button) !important;
+}
+
+.message-G6O-Wv {
+  padding: 0;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+
 /***************************************** 
  *
  ****************************************/
-/* Main layer */
-.layers-OrUESM {
-  z-index: 1;
-  backdrop-filter: blur(var(--app_blur));
+.container-27tlK1 {
+  background-color: var(--main_content_color);
+  border-radius: var(--border_radius_button);
+  border: none;
 }
 
-.chat-2ZfjoI,
-.noChannel-1GDIAZ {
-  background-color: var(--main_content_color) !important;
+.channelRow-4X_3fi {
+  background-color: var(--main_content_color);
 }
 
-/* Friends list */
-.container-2cd8Mz {
-  background-color: var(--main_content_color) !important;
+.channelRow-4X_3fi.firstChannel-3vAGDY {
+  border-radius: var(--border_radius_button) var(--border_radius_button) 0 0;
+}
+
+.channelRow-4X_3fi.lastChannel-21yyBC {
+  border-radius: 0 0 var(--border_radius_button) var(--border_radius_button);
+}
+
+.channelRow-4X_3fi:not(.disabled-3cfocy):hover {
+  background-color: var(--main_content_color);
+}
+
+
+/***************************************** 
+ *
+ ****************************************/
+.wrapper-1_HaEi {
+  background-color: transparent;
 }
