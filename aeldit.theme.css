@@ -1,0 +1,172 @@
+/**
+ * @name Test
+ * @author Aeldit
+ * @description My desc
+ * @version 0.0.1
+ */
+
+:root {
+  --homeImage: url("https://https://github.com/Aeldit/DiscordTheme/blob/main/github_logo.jpg?raw=true");
+  --app_bg: url("https://github.com/Aeldit/DiscordTheme/blob/main/img_2.jpg?raw=true");
+  --popout_header_shadow: 0px 5px 10px 0px #720b0baa;
+  --main_content_color: #141414aa;
+  --accent_color: #d40b0baa;
+  --border_radius: 15px;
+  --border_radius_list: 10px;
+}
+
+body {
+  background-color: transparent;
+}
+
+.app-2CXKsg,
+.applicationStore-2nk7Lo,
+.chat-2ZfjoI,
+.container-2cd8Mz,
+.container-ZMc96U.themed-Hp1KC_,
+.container-1NXEtd,
+.container-PNkimc,
+.contentRegion-3HkfJJ,
+.contentRegionScroller-2_GT_N,
+.header-2EadGG,
+.inviteToolbar-2k2nqz,
+.layer-86YKbF,
+.members-3WRCEx,
+.members-3WRCEx>div,
+.messages-3amgkR,
+.notice-12Koq-,
+.nowPlayingColumn-1eCBCN,
+.pageWrapper-2PwDoS,
+.panels-3wFtMD,
+.privateChannels-oVe7HL,
+.scroller-2XLwLg,
+.wrapper-3HVHpV,
+.wrapper-15CKyy,
+.scroller-WSmht3,
+.scroller-2TZvBN,
+.scroller-1TOeMq,
+.scroller-3_YDR2,
+.scroller-29cQFV,
+.sidebar-1tnWFu,
+.sidebarRegionScroller-FXiQOh,
+.standardSidebarView-E9Pc3j,
+.wrapper-1Rf91z,
+.container-1oAagU,
+.wrapper-1gVUIN,
+.wrapper-1gVUIN.minimum-fXpVNc,
+.wrapper-KXM2i0 {
+  background: 0 0 !important
+}
+
+.app-2CXKsg,
+.bg-1QIAus {
+  background-color: transparent;
+}
+
+/* Bg image */
+.appMount-2yBXZl {
+  background: var(--app_bg) !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+.container-2RRFHK {
+  background: var(--app_bg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/***************************************** 
+ * Title bar
+ ****************************************/
+.titleBar-1it3bQ {
+  height: 25px;
+  margin-top: 0px;
+  background-color: var(--main_content_color);
+}
+
+/* Top left word ("Discord") */
+.wordmarkWindows-2dq6rw {
+  color: #fff;
+}
+
+/* Top right buttons (minimize, resize and close) */
+.winButton-3UMjdg {
+  height: 100%;
+  top: 0;
+  color: #fff;
+}
+
+/***************************************** 
+ * Channels list
+ ****************************************/
+.platform-win .sidebar-1tnWFu {
+  border-radius: 10px;
+}
+
+/***************************************** 
+ * Chat
+ ****************************************/
+.chatContent-3KubbW {
+  background-color: transparent;
+}
+
+/* Jump to present bar */
+.newMessagesBar-1hF-9G,
+.jumpToPresentBar-1cEnH0 {
+  background-color: var(--accent_color);
+}
+
+.newMessagesBar-1hF-9G {
+  border-radius: 0 0 var(--border_radius) var(--border_radius);
+}
+
+/***************************************** 
+ * Members list
+ ****************************************/
+.container-2o3qEW {
+  background-color: var(--main_content_color);
+}
+
+.members-3WRCEx,
+.members-3WRCEx>div {
+  background-color: transparent;
+}
+
+.member-2gU6Ar {
+  background-color: transparent;
+}
+
+.layout-1qmrhw {
+  border-radius: var(--border_radius_list);
+}
+
+/* Bot tag */
+.botTag-7aX5WZ {
+  border-radius: 5px !important;
+}
+
+.botTag-7aX5WZ.botTagRegular-kpctgU {
+  background-color: var(--accent_color);
+}
+
+/***************************************** 
+ *
+ ****************************************/
+/* Main layer */
+.layers-OrUESM {
+  z-index: 1;
+  backdrop-filter: blur(var(--app_blur));
+}
+
+.chat-2ZfjoI,
+.noChannel-1GDIAZ {
+  background-color: var(--main_content_color) !important;
+}
+
+/* Friends list */
+.container-2cd8Mz {
+  background-color: var(--main_content_color) !important;
+}
